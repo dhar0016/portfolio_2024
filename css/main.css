@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* change bootstrao defalt values */
+.btn-danger {
+    --bs-btn-bg: #F05454;
+  }
+
+/* make defailt body styling */
+body{
+    background-color: #F5F5F5;
+    font-family: 'Poppins', sans-serif;
+    color: #121212;
+    scroll-behavior: smooth;
+}
+
+/*Skip Link style properties*/
+.skip-to-main-content-link {
+    position: absolute;
+    left: -9999px;
+    z-index: 999;
+    padding: 1em;
+    background-color: black;
+    color: white;
+    opacity: 0;
+  }
+  .skip-to-main-content-link:focus {
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+  }
+
+
+/* Home page ----- landing section */
+section.landing-sec{
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+/* logo */
+nav img {
+    width: auto;
+    height: 70px;
+}
+
+
+/* navigation  links*/
+nav ul li{
+    /* margin-right: 15px; */
+    transition: border-bottom 0.3s ease-in-out;
+    border-bottom: 1px solid transparent;
+}
+
+/*when hover the va link show bolder in the bottom*/
+nav ul li:hover{
+    border-bottom: #121212 1px solid;
+}
+
+
+
+
+
+/* landing page content containers */
+.landing-sec .container {
+    width: 100%;
+    height: 80%;
+
+    margin-top: 70px;
+}
+  
+  
+/* when hover left part of landding section  , make shadow for "USHAN" text*/
+.landing-sec .column-50-left:hover span{
+    text-shadow: 40px 20px 12px #f0545469;
+}
+
+/*Transmission of my name*/
+.landing-sec .column-50-left span{
+    color: #F05454 ;
+    transition: 0.36s ease;
+}
+
+/*when hover the link show hand icon*/
+.landing-sec .column-50-left a{
+    cursor: pointer;
+}
+
+/* set size for button "contact us" */
+.landing-sec .column-50-left button {
+    width: 130px;
+    height: 40px;
+}
+
+/* bold text when hover button */
+.landing-sec .column-50-left button:hover{
+    font-weight: bold;
+}
+
+
+/* landing page left image */
+.my-image-wrapper{
+    width: 100%;
+    height: auto;
+}
+
+/*Default home page image size*/
+.my-image-wrapper img{
+    width: 100%;
+    height: auto;
+}
+
+.navbar-collapse{
+    flex-grow: 0 !important;
+}
+
+
+/* Portfolio section */
+section.portfolio-sec{
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+
+section.portfolio-sec .main-title span{
+    color: #F05454;
+}
+
+  /*potfolio Default image size*/
+section.portfolio-sec .container  .image-wrapper img {
+    width: 100%;
+    height: 400px;
+    transition: 0.3s ease-in-out;
+}
+
+/* add scale and shadow animation when hover images */
+section.portfolio-sec .container  .image-wrapper img:hover {
+    transform: scale(1.2);
+    box-shadow: 1px 0px 95px -4px rgba(0,0,0,0.75);
+}
+
+
+/* Feedback section */
+
+/* Feedback text */
+section.feedback-sec .main-title span{
+    color: #F05454;
+}
+
+
+
+/* review box */
+section.feedback-sec .container-sm  .review-wrapper .review {
+    width: 100%;
+    height: 430px;
+    transition: 0.3s ease-in-out;
+
+    background-color: #F05454;
+    border-radius: 10px;
+}
+
+
+/* put box shadow when hover  */
+section.feedback-sec .container-sm  .review-wrapper .review:hover{
+    box-shadow: 1px 0px 17px 0px rgba(0,0,0,0.75);
+}
+
+
+
+/* client image  */
+section.feedback-sec .container-sm  .review-wrapper .review img{
+    width: 70px;
+    height: 70px;
+    border: #F5F5F5 5px solid;
+}
+
+/* increase client image scale when hover  */
+section.feedback-sec .container-sm  .review-wrapper .review:hover img {
+    transform: scale(1.1);
+}
+
+
+
+/* client review  */
+section.feedback-sec .container-sm  .review-wrapper .review p{
+    color: #30475E;
+    width: 80%;
+}
+
+/* change paragraph color when hover  */
+section.feedback-sec .container-sm  .review-wrapper .review:hover p {
+    color: #F5F5F5;
+}
+
+/* Footer */
+footer{
+    height: 50px;
+    background-color: #30475E;
+}
+
+
+
+
+/* devider */
+.fancy {
+    --b: 6px;   /* control the border thickness */
+    --w: 80px;  /* control the width of the line*/
+    --g: 15px;  /* control the gap */
+    --c: #0B486B;
+   
+    width: fit-content;
+    padding: 0 1em;
+    line-height: 1.6em;
+    border: 1px solid;
+    color: #fff;
+    background: 
+      conic-gradient(from   45deg at left ,var(--c) 25%,#0000 0) 0,
+      conic-gradient(from -135deg at right,var(--c) 25%,#0000 0) 100%;
+    background-size: 51% 100%;
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    border-image: 
+       linear-gradient(
+         #0000      calc(50% - var(--b)/2),
+         var(--c) 0 calc(50% + var(--b)/2),
+         #0000    0) 
+      1/0 var(--w)/calc(var(--w) + var(--g));
+    margin-inline: auto;
+  }
+  
+
+
+
+  /* popup */
+
+  .popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-image {
+    width: auto;
+    height: auto;
+
+    max-width: 90%;
+    max-height: 90vh;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10%;
+    left: 90%;
+    transform: translate(-10%, -90%);
+    font-size: 70px;
+    color: white;
+    cursor: pointer;
+
+    z-index: 1500;
+}

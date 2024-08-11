@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ushan D</title>
+
+    <link rel="stylesheet" href="./css/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="https://www.cssscript.com/demo/sticky.css" rel="stylesheet" type="text/css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+
+    <link rel="stylesheet" href="./style.css">
+
+    <style>
+        #animatedText {
+          transition: opacity 0.36s ease;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- landing section -->
+    <section class="landing-sec">
+        <!-- navigation bar -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">
+                    <img src="./images/logo.png" alt="logo" >
+                </a>
+    
+                <!-- mobile view toggle button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <!-- navigation links -->
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-3">
+                        <li class="nav-item ms-2 ">
+                          <a class="nav-link fw-normal text-decoration-none active" aria-current="page" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item ms-2">
+                          <a class="nav-link fw-normal text-decoration-none" href="#portfolio">Portfolio</a>
+                        </li>
+                        <li class="nav-item ms-2">
+                            <a class="nav-link fw-normal text-decoration-none" href="#cv">CV</a>
+                          </li>
+                          <li class="nav-item ms-2">
+                            <a class="nav-link fw-normal text-decoration-none" href="#resume">Resume</a>
+                          </li>
+                        <li class="nav-item ms-2">
+                          <a class="nav-link fw-normal text-decoration-none" href="./about.html">About</a>
+                        </li>
+                        <li class="nav-item ms-2">
+                          <a class="nav-link fw-normal text-decoration-none" href="./contact.html">Contact</a>
+                        </li>
+                      
+                      </ul>
+                  </div>
+            </div>
+        </nav>
+        
+        
+
+
+        <!-- my details for landing and contact button -->
+        <div class="row mt-5 p-5">
+            <div class="col-12 col-lg-6 column-50-left ps-5">
+                <h1 class="fw-bold" style="font-size: 70px;">Hi, I am <span>USHAN</span> </h1>
+                <h3 class="fw-bold">I will be your <span id="animatedText">Graphic designer</span></h3>
+                <p class="mt-4">and I'm thrilled to welcome you to my digital portfolio. I specialize in creating engaging user experiences, powerful graphic designs, and evocative photographic content. My mission is to blend aesthetics with functionality, bringing each client's vision to vibrant life through thoughtful design and visual storytelling. <br><br>
+                    Feel free to browse my portfolio sections: Graphic Design, UI/UX, Photography, and Branding. Each section showcases my best work and highlights my approach to digital storytelling. <br><br>
+                   
+                   
+                    <br>
+                    I’m eager to hear about your upcoming projects and how I can help bring them to life. Contact Me to start our creative journey together.</p>
+
+                <a href="./contact.html" class="btn btn-danger p-3"> CONTACT ME </a>
+            </div>
+
+            <div class="col-lg-6 column-50-right d-none d-lg-block">
+                <!-- landing page image -->
+                <div class="my-image-wrapper">
+                    <img src="./images/home.png" alt="home page image"  >
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- section js code -->
+     <script>
+        $(document).ready(function() {
+        const texts = ["Graphic designer", "UI/UX designer", "Photographer"];
+        let index = 0;
+
+        function changeText() {
+            $('#animatedText').css('opacity', 0); // Start fade out
+
+            setTimeout(function() {
+            $('#animatedText').text(texts[index]); // Change text
+            $('#animatedText').css('opacity', 1); // Start fade in
+
+            index = (index + 1) % texts.length; // Update index
+            }, 360); // Wait for the fade-out transition to complete
+        }
+
+        setInterval(changeText, 2000); // Change text every 2 seconds
+        });
+
+     </script>
+
+
+    <!-- Portfolio section -->
+    <section class="portfolio-sec w-100 mt-md-5 d-flex flex-column  justify-content-center align-items-center">
+
+        <div id="popup" class="popup">
+            <span id="close-btn" class="close-btn">&times;</span>
+            <img id="popup-image" class="popup-image" src="" alt="">
+        </div>
+
+
+        <h1 class="fw-bold text-center main-title mb-2" style="font-size: 70px;">What I <span>Do</span> Before</h1>
+
+        <a name="portfolio"></a>
+
+        <!-- <h3 class="text-center mt-5 mb-1">Graphi<span style="color:#F05454;">c</span> Design</h3> -->
+        <h4 class="fancy mt-5" style="--w: 50vw;--c: #F05454;--b:4px;--g: 40px">Graphic Design</h4>
+
+        <div class="container p-5">
+            <p class="description-category text-center"></p>
+        </div>
+        
+       
+
+        <div class="wrapper">
+
+            <div class="container ">
+                
+              <input
+                class="checkbox-all"
+                id="all"
+                type="radio"
+                name="checkbox"
+                checked
+              />
+              <label for="all">all</label>
+              <input class="checkbox-js" id="js" type="radio" name="checkbox" />
+              <label for="js">business card</label>
+              <input class="checkbox-react" id="react" type="radio" name="checkbox" />
+              <label for="react">movie poster</label>
+              <input class="checkbox-html" id="html" type="radio" name="checkbox" />
+              <label for="html">Digital Drawing</label>
+              <input class="checkbox-viu" id="viu" type="radio" name="checkbox" />
+              <label for="viu">Restore Old Pictures</label>
+              <input class="checkbox-laravel" id="laravel" type="radio" name="checkbox" />
+              <label for="laravel">Restaurant Menu</label>
+              <input class="checkbox-wc" id="wc" type="radio" name="checkbox" />
+              <label for="wc">Wedding Card</label>
+
+
+              <script>
+                    const descriptions = {
+                        "all": "",
+                        "js": "Business card \nI specialize in creating visually striking and memorable business cards that make a lasting impression. My designs combine creativity with strategic thinking, ensuring that each card reflects the unique identity of the brand it represents. Whether minimalist or bold, my goal is to craft business cards that not only communicate essential information but also serve as a powerful tool for personal and professional branding.",
+                        "react": "Movie poster \nPassionate about cinema, I craft movie posters that capture the essence of a film and engage audiences. My designs blend art with storytelling, creating visuals that stand out and resonate with the movie's themes.",
+                        "html": "Digital Drawing \nWith a focus on creativity and detail, my digital drawings bring ideas to life through vibrant and expressive art.",
+                        "viu": "Restore Old Pictures \nSpecializing in photo restoration, I breathe new life into old, faded images. With meticulous attention to detail, I repair and enhance cherished memories, preserving their history while giving them a fresh, vibrant look.",
+                        "laravel": "Restaurant Menu Design \nI design restaurant menus that not only showcase dishes but also enhance the dining experience. Combining aesthetics with functionality, my menus are crafted to reflect the restaurant's brand and entice customers with visually appealing layouts.",
+                        "wc": "Wedding Card \nI design elegant and personalized wedding cards that capture the essence of each couple's special day. Every card is crafted with attention to detail, ensuring a beautiful and memorable keepsake that reflects the love and joy of the occasion."
+                    };
+            
+                    document.querySelectorAll('input[name="checkbox"]').forEach(input => {
+                        input.addEventListener('change', (event) => {
+                            const description = descriptions[event.target.id];
+                            document.querySelector('.description-category').textContent = description;
+                        });
+                    });
+                </script>
+              
+              <div class="seperator"></div>
+              <!-- project cards-->
+              <div class="cards">
+                <div class="project html">
+                    <img src="./graphic/dd/digital drawing eagle 01.png"  class="clickable-image" alt="Flyer Designs">
+                </div>
+                <div class="project html">
+                    <img src="./graphic/dd/Flintstone.png"  class="clickable-image" alt="Flyer Designs">
+                </div>
+                <div class="project html">
+                    <img src="./graphic/dd/digital drawing eagle.png"  class="clickable-image" alt="Flyer Designs">
+                </div>
+
+                <div class="project js">
+                    <img src="./graphic/bc/business card 1.jpg"  class="clickable-image" alt="Flyer Designs">
+                </div>
+                <div class="project js">
+                    <img src="./graphic/bc/business card 2.jpg"  class="clickable-image" alt="Flyer Designs">
+                </div>
+                <div class="project js">
+                    <img src="./graphic/bc/business card 3.jpg"  class="clickable-image" alt="Flyer Designs">
+                </div>
+
+                <div class="project react">
+                    <img src="./graphic/mp/movie_poster.png"  class="clickable-image" alt="Flyer Designs">
+                </div>
+
+                <div class="project viu">
+                    <img src="./graphic/rop/old-picture-restore.png"  class="clickable-image" alt="Flyer Designs">
+                </div>
+
+                <div class="project laravel">
+                    <img src="./graphic/rm/Menu Design 4.jpg"  class="clickable-image" alt="Flyer Designs">
+                </div>
+                <div class="project laravel">
+                    <img src="./graphic/rm/Menu Design 5.jpg"  class="clickable-image" alt="Flyer Designs">
+                </div>
+                <div class="project laravel">
+                    <img src="./graphic/rm/Menu Design.jpg"  class="clickable-image" alt="Flyer Designs">
+                </div>
+                <div class="project laravel">
+                    <img src="./graphic/rm/menu design 1.jpg"  class="clickable-image" alt="Flyer Designs">
+                </div>
+                <div class="project laravel">
+                    <img src="./graphic/rm/menu design 3.jpg"  class="clickable-image" alt="Flyer Designs">
+                </div>
+
+
+                <div class="project wc">
+                    <img src="./graphic/wc/wedding card - 01.jpg"  class="clickable-image" alt="Flyer Designs">
+                </div>
+                <div class="project wc">
+                    <img src="./graphic/wc/wedding card - 02.png"  class="clickable-image" alt="Flyer Designs">
+                </div>
+                <div class="project wc">
+                    <img src="./graphic/wc/wedding card - 03.jpg"  class="clickable-image" alt="Flyer Designs">
+                </div>
+                
+
+              </div>
+            </div>
+          </div>
+
+
+
+          <!-- <h3 class="text-center mt-5 mb-5">photogr<span style="color:#F05454;">a</span>phic</h3> -->
+          <h4 class="fancy" style="--w: 50vw;--c: #F05454;--b:4px;--g: 40px">Photography</h4>
+
+          <div class="container p-5">
+            <p class="description-category text-center">
+                I capture moments that tell a story and evoke emotion. My photography work spans various genres, blending technical skill with artistic vision to create images that are both striking and meaningful. Whether it's portraiture, landscapes, or event photography, I focus on composition, lighting, and detail to bring out the beauty in every shot.
+            </p>
+        </div>
+          
+        <div class="wrapper">
+
+            <div class="container ">
+
+            
+                
+              <input
+                class="checkbox-all1"
+                id="all1"
+                type="radio"
+                name="checkbox1"
+                checked
+              />
+              <label for="all1">all</label>
+              <input class="checkbox-macro" id="macro" type="radio" name="checkbox1" />
+              <label for="macro">Macro</label>
+              <input class="checkbox-reflec" id="reflec" type="radio" name="checkbox1" />
+              <label for="reflec">Reflection</label>
+              
+              
+              <div class="seperator"></div>
+              <!-- project cards-->
+              <div class="cards">
+                <div class="project macro">
+                    <img src="./photography/img.png" class="clickable-image" alt="Flyer Designs">
+                </div>
+                <div class="project reflec">
+                    <img src="./photography/Dharmawardena_U_01 (1).jpg" class="clickable-image" alt="Flyer Designs">
+                    
+                </div>
+                <div class="project reflec">
+                    <img src="./photography/img1.jpg" class="clickable-image" alt="Flyer Designs">
+                </div>
+
+                <div class="project reflec">
+                    <img src="./photography/img2.jpg" class="clickable-image" alt="Flyer Designs">
+                </div>
+
+                <div class="project reflec">
+                    <img src="./photography/img3.jpg" class="clickable-image" alt="Flyer Designs">
+                </div>
+
+                <div class="project reflec">
+                    <img src="./photography/img4.jpg" class="clickable-image" alt="Flyer Designs">
+                </div>
+
+                <div class="project reflec">
+                    <img src="./photography/img5.jpg" class="clickable-image" alt="Flyer Designs">
+                </div>
+
+                <div class="project reflec">
+                    <img src="./photography/img6.jpg" class="clickable-image" alt="Flyer Designs">
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <a href="https://dhar0016.myportfolio.com/work" class="btn btn-danger p-1 mt-5 mb-5" style="width: 800px;" target="_blank">  View More </a>
+
+          <h4 class="fancy" style="--w: 50vw;--c: #F05454;--b:4px;--g: 40px">UIUX Design</h4>
+
+          <!-- <h3 class="text-center mt-5 mb-5">UIU<span style="color:#F05454;">X</span> Design</h3> -->
+          <div class="container p-5 m-5">
+            <h3 class="mt-1 mb-5 text-danger">Name : Park here App</h3>
+          
+         
+          
+          <div class="row mt-4 mb-5 p-5" style="border: #F05454 3px solid;border-radius: 5px;">
+            
+            <div class="col-12 col-md-4">
+                <img src="./UIUX/00.png" alt="">
+            </div>
+            <div class="col-12 col-md-4">
+                <img src="./UIUX/01aq.png" alt="">
+            </div>
+            <div class="col-12 col-md-4">
+                <img src="./UIUX/03q.png" alt="">
+            </div>
+
+            
+
+           
+                <p class="mt-5 mb-3">In this project, I designed a user-friendly interface for a vehicle parking solution app that simplifies the parking experience. The UI/UX design focuses on intuitive navigation, clear visual cues, and efficient functionality, ensuring that users can quickly find, reserve, and pay for parking spots with ease. The design balances aesthetics with practicality, providing a seamless experience for drivers in busy urban environments.</p>
+
+                <a href="https://www.figma.com/proto/fSGAbk83TgrF5D5YR1Xy30/parking-app-2?content-scaling=fixed&embed_host=share&kind=proto&node-id=1-2512&page-id=0%3A1&scaling=min-zoom&t=rIrHwhwCzt07HdDx-1&viewport=537%2C393%2C0.13" class="btn btn-danger p-1 mt-5" target="_blank">  View Full UI </a>
+            </div>
+
+          </div>
+
+          <div class="container p-5 mt-2">
+            <h3 class="mt-3 mb-3 text-danger">Name : Greeny Organic</h3>
+
+            <div class="container p-5" style="border: #F05454 3px solid;border-radius: 5px;">
+
+            
+
+
+            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);border-radius: 5px;" width="100%" height="600px" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FOjb77mKThP4wLPs4dydDgG%2FUntitled%3Fnode-id%3D2-34438%26t%3DDHCKNnjcceLalmvT-1%26scaling%3Dmin-zoom%26content-scaling%3Dfixed%26page-id%3D2%253A26825%26starting-point-node-id%3D2%253A34438%26show-proto-sidebar%3D1" allowfullscreen></iframe>
+
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-12">
+                       
+                        <p>This project aims to develop an interactive and user-friendly interface for Greeny Organics for easy browsing, ordering, and communication with customers interested in Nigerian cuisine. The purpose of this project is to improve customer interaction and make the ordering process for Greeny Organics efficient through UI/UX Design.</p>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <h3>Goals:</h3>
+                        <ul>
+                            <li>Provide high-quality Nigerian food items (frozen, fresh, dried) to customers aged 18-65.</li>
+                            <li>Make Nigerian cuisine more accessible by enabling ordering and delivery from home.</li>
+                            <li>Enhance customer interaction and streamline the ordering process through a user-friendly mobile app.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <h3>Outcomes:</h3>
+                        <ul>
+                            <li>Create a nostalgic and comfortable user experience through the app's UI/UX design.</li>
+                            <li>Facilitate direct ordering for customers to browse and purchase items seamlessly.</li>
+                            <li>Improve communication channels like email and WhatsApp to better support customer engagement and inquiries.</li>
+                            <li>Leverage technology to offer an immersive experience and make authentic Nigerian cuisine easily accessible.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <h3>Deliverables:</h3>
+                        <ul>
+                            <li>Mobile application interface</li>
+                            <li>Content for the platform</li>
+                            <li>Communication tools</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+          </div>
+          
+
+    </section>
+
+    <section class="w-100 p-5 mt-5 mb-5 " >
+
+        <h1 class="text-center mt-5 mb-5" style="font-size: 40px;">Curriculum Vitae</h1>
+
+        <div class="container d-flex flex-column  justify-content-center align-items-center">
+            <a href="./images/cv.jpg" class="btn btn-danger p-2 mb-5 text-center" style="width: 400px;" target="_blank" download>  Download My CV </a>
+        </div>
+        
+        <a name="cv"></a>
+        <p class="text-center"> I’m eager to hear about your upcoming projects and how I can help bring them to life. Contact Me to start our creative journey together.</p>
+
+        <div class="row p-5">
+            <div class="col-12 ">
+                <img src="./images/cv.jpg" alt="cv" class="w-100">
+
+                
+            </div>
+
+            <h1 class="text-center mt-5 mb-5">Resume</h1>
+
+            <div class="container d-flex flex-column  justify-content-center align-items-center">
+                <a href="./images/my-Resume.png" class="btn btn-danger p-2 mb-5 text-center" style="width: 400px;" target="_blank" download>  Download My Resume </a>
+            </div>
+
+            <div class="col-12 mt-5">
+                <a name="resume"></a>
+                <img src="./images/my-Resume.png" alt="cv" class="w-100">
+            </div>
+        </div>
+    </section>
+
+    <!-- customer feedback and reviews -->
+    <section class="feedback-sec mt-5">
+        <h1 class="fw-bold fs-1 text-center main-title"> What Our <span> Customers </span> Are Saying</h1>
+        <p class="sub-title text-center">Unveiling the Power of Customer Testimonials: Discover the Real Impact of Our Products and Services</p>
+
+  
+
+        <div class="container-sm">
+            <div class="row mb-5">
+
+                <!-- feedback box with clint image /name / feedback text -->
+                <div class=" col-12 col-md-6 col-lg-4 review-wrapper">
+                  <div class="card review mt-3 d-flex align-items-center justify-content-between ">
+                        <img src="https://randomuser.me/api/portraits/women/24.jpg" class="rounded-circle mt-4" alt="clint image">
+                        <h5 class="fw-bolder mt-3 text-light">Ana Peck</h5>
+                        <div class="card-body row justify-content-center">
+                            <p class="text-center" >A True Professional: Working with our graphic designer was a seamless experience. Their ability to translate our ideas into visually stunning designs was remarkable. </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- feedback box with clint image /name / feedback text -->
+                <div class=" col-12 col-md-6 col-lg-4 review-wrapper">
+                    <div class="card review mt-3 d-flex align-items-center justify-content-between">
+                        <img src="https://randomuser.me/api/portraits/men/96.jpg" class="rounded-circle mt-4" alt="clint image">
+                        <h5 class="fw-bolder mt-3 text-light">Raul Terry</h5>
+
+                        <div class="card-body row justify-content-center">
+                            <p class="text-center">Exceeded Expectations: Our graphic designer delivered exceptional creativity, attention to detail, and a keen understanding of our brand. The final designs truly captured our vision and received rave reviews from both our team and clients.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- feedback box with clint image /name / feedback text -->
+                <div class=" col-12 col-md-6 col-lg-4 review-wrapper">
+                    <div class="card review mt-3 d-flex align-items-center justify-content-between">
+                        <img src="https://randomuser.me/api/portraits/women/82.jpg" class="rounded-circle mt-4" alt="clint image">
+                        <h5 class="fw-bolder mt-3 text-light">Lois Gray</h5>
+
+                        <div class="card-body row justify-content-center">
+                            <p class="text-center">Design Magic at Its Finest: Our graphic designer possesses an extraordinary talent for transforming concepts into captivating visuals. Their artistic flair, coupled with a deep understanding of  resulted in designs that beautifully conveyed our brand's essence. </p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="d-flex align-items-center justify-content-between w-100 text-light">
+        <p class="fs-6 ms-4 mt-3" >Copyright @ 2023</p>
+        <p class="fs-6 me-4 mt-3" >Design by USHAN</p> 
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    
+
+    <script>
+        document.querySelectorAll('.clickable-image').forEach(image => {
+            image.addEventListener('click', function() {
+                const popup = document.getElementById('popup');
+                const popupImage = document.getElementById('popup-image');
+                
+                // Set the source of the popup image to the clicked image's source
+                popupImage.src = this.src;
+
+                // Display the popup
+                popup.style.display = 'flex';
+                
+                // Add blur effect to the body
+                document.popup.style.filter = 'blur(5px)';
+            });
+        });
+
+        document.getElementById('close-btn').addEventListener('click', function() {
+            const popup = document.getElementById('popup');
+            
+            // Hide the popup
+            popup.style.display = 'none';
+            
+            // Remove blur effect from the body
+            document.popup.style.filter = 'none';
+        });
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+/*About Page*/
+section.about-sec{
+    min-height: 100vh;
+}
+
+/*About page main text - Heading and Sub*/
+section.about-sec h1{
+    color: #121212;
+    margin-top: 50px;
+}
+
+
+section.about-sec h1 span{
+    color: #F05454;
+}
+
+/*Container one - Who i am*/
+section.about-sec .container-1 {
+    width: 100%;
+    height: 80%;
+    margin-top: 70px;
+}
+
+/*Change my name color*/
+section.about-sec .column-60-left .first-p .name{
+    color: #F05454;
+}
+
+/*Skill bar with animation*/
+section.about-sec .container-2{
+    width: 100%;
+    height: auto;
+}
+
+section.about-sec .container-2 .skill-bar {
+    width: 60%;
+    height: auto;
+  }
+  

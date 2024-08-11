@@ -1,0 +1,78 @@
+/*Default contact page screen size*/
+section.contact-sec{
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+/*Contact page main text - Heading and Sub*/
+section.contact-sec h1{
+    color: #121212;
+    margin-top: 50px;
+}
+
+
+section.contact-sec h1 span{
+    color: #F05454;
+
+}
+
+/*Container - Who i am*/
+section.contact-sec .container {
+    height: 80%;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+/*Contact Form*/
+section.contact-sec .column-60-left form{
+    width: 80%;
+    height: auto;
+}
+
+/*Styling name and email field without submit button*/
+section.contact-sec .column-60-left form input:not(.submit){
+    width: 100%;
+    height: 40px;
+    background-color: #E1E1E1;
+}
+
+/*Styling Message field without submit button*/
+
+section.contact-sec .column-60-left form textarea{
+    width: 100%;
+    height: auto;
+    background-color: #E1E1E1;
+}
+
+/*input field label style*/
+section.contact-sec .column-60-left form label{
+    margin-top: 20px;
+    font-size: 15px;
+
+}
+
+/*Styling field placeholders*/
+section.contact-sec .column-60-left form input::placeholder {
+    padding-left: 20px;
+}
+
+/*Input place holder padding*/
+section.contact-sec .column-60-left form  textarea::placeholder{
+    padding-left: 20px;
+    padding-top: 10px;
+
+}
+
+/*Styling the submit btn*/
+section.contact-sec .column-60-left form input.submit{
+    transition: 0.36s ease-in;
+}
+
+/*Right side image properties*/
+section.contact-sec .column-40-right img{
+    width:100%;
+    height: auto;
+    border-radius: 10px;
+}
+
